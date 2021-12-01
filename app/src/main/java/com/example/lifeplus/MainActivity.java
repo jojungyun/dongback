@@ -1,12 +1,19 @@
 package com.example.lifeplus;
 
+import static com.example.lifeplus.R.*;
+
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,7 +34,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Vector;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MainActivity<imageButton> extends AppCompatActivity implements OnMapReadyCallback {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
     private FusedLocationSource locationSource;
     private NaverMap naverMap;
@@ -35,24 +42,26 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     EditText editText;
     ImageButton imageButton;
     Marker marker = new Marker();
+    private Object ContextMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(layout.activity_main);
 
-        editText = findViewById(R.id.editText);
-        imageButton = findViewById(R.id.search);
+        editText = findViewById(id.editText);
+        imageButton = findViewById(id.search);
+        registerForContextMenu(imageButton);
 
-        //지도 사용권한을 받아옴
+            //지도 사용권한을 받아옴
         locationSource = new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        MapFragment mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.map);
+        MapFragment mapFragment = (MapFragment) fragmentManager.findFragmentById(id.map);
 
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
-            fragmentManager.beginTransaction().add(R.id.map, mapFragment).commit();
+            fragmentManager.beginTransaction().add(id.map, mapFragment).commit();
         }
         //getMapAsync를 호출하여 비동기로 onMapReady콜백 메서드 호출
         //onMapReady에서 NaverMap객체를 받음
@@ -113,6 +122,31 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        findViewById(id.menu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                final PopupMenu popupMenu = new PopupMenu(getApplicationContext(),view);
+                getMenuInflater().inflate(menu.menu_item,popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.category:
+                                Intent intent=new Intent(getApplicationContext(),CatrogyActivity.class);
+                                startActivity(intent);
+                                return true;
+                            case id.enrollment:
+                                intent = new Intent(getApplicationContext(),EnrollmentActivity.class);
+                                startActivity(intent);
+                                return true;
+                        }
+                        return false;
+                    }
+                });
+                popupMenu.show();
+            }
+        });
+
 
         // 버튼 이벤트
         imageButton.setOnClickListener(new Button.OnClickListener() {
@@ -157,7 +191,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             }
         });
-
     }
 
 

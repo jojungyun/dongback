@@ -14,7 +14,6 @@
             android:id="@+id/menu"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
             android:layout_weight="1"
             android:backgroundTint="#90818181"
             android:src="@drawable/ic_menu"
@@ -35,7 +34,6 @@
             android:id="@+id/search"
             android:layout_width="30dp"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
             android:layout_weight="1"
             android:backgroundTint="#90818181"
             android:src="@drawable/ic_search"
@@ -48,7 +46,7 @@
         android:id="@+id/map"
         android:name="com.naver.maps.map.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="690dp"
+        android:layout_height="730dp"
         android:layout_marginTop="45dp" />
 
 </RelativeLayout>
