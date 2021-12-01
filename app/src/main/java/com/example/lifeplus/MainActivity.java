@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -132,7 +130,7 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.category:
-                                Intent intent=new Intent(getApplicationContext(),CatrogyActivity.class);
+                                Intent intent=new Intent(getApplicationContext(), CategoryActivity.class);
                                 startActivity(intent);
                                 return true;
                             case id.enrollment:
