@@ -14,15 +14,12 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="가맹점 정보 입력"
+        android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
     <LinearLayout
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
@@ -34,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="업체명 : "
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <EditText
@@ -46,7 +44,7 @@
     <LinearLayout
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
@@ -56,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="카테고리 : "
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <EditText
@@ -68,7 +67,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
@@ -80,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전화번호 : "
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <EditText
@@ -91,7 +91,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
@@ -103,6 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="주소 : "
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <EditText
@@ -114,7 +115,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
@@ -126,6 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="사업자 번호 : "
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <EditText
@@ -137,7 +139,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
@@ -151,6 +153,7 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:text="사진 : "
+            android:textColor="#000000"
             android:textAlignment="textStart"
             android:textSize="20sp" />
 
@@ -163,15 +166,14 @@
             app:srcCompat="@drawable/ic_image" />
     </LinearLayout>
 
-        <Button
-            android:id="@+id/upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="90dp"
-            android:background="@drawable/button"
-            android:text="등록하기"
-            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-    </ScrollView>
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="등록하기" />
+
 </LinearLayout>
