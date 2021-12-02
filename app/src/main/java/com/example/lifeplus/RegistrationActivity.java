@@ -31,13 +31,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, REQUEST_CODE,null);//????????????
+                startActivityForResult(intent, REQUEST_CODE,null);
             }
         });
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {//??????
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
@@ -58,7 +58,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
 
-    // 사진찍기 기능(카메라)
+    // 사진찍기 기능(카메라) --- 사용 XXXXXXXX
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {
@@ -67,10 +67,5 @@ public class RegistrationActivity extends AppCompatActivity {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);///???????
-//
-//    }
 
 }
