@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -31,13 +30,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, REQUEST_CODE,null);//????????????
+                startActivityForResult(intent, REQUEST_CODE,null);
             }
         });
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {//??????
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
@@ -57,15 +56,19 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
+    /*public void upload_bt(View v){
+        Toast.makeText(this, "정보 등록 성공", Toast.LENGTH_SHORT).show();
+    }*/
+
 
     // 사진찍기 기능(카메라)
-    static final int REQUEST_IMAGE_CAPTURE = 1;
+    /*static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
-    }
+    }*/
 
 }
