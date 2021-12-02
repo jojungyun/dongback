@@ -133,8 +133,8 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
                                 Intent intent=new Intent(getApplicationContext(), CategoryActivity.class);
                                 startActivity(intent);
                                 return true;
-                            case id.enrollment:
-                                intent = new Intent(getApplicationContext(),EnrollmentActivity.class);
+                            case id.registration:
+                                intent = new Intent(getApplicationContext(),RegistrationActivity.class);
                                 startActivity(intent);
                                 return true;
                         }

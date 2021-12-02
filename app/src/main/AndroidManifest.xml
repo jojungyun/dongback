@@ -14,10 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifePlus">
         <activity
-            android:name=".EnrollmentActivity"
-            android:exported="true" />
-        <activity
             android:name=".CategoryActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".RegistrationActivity"
             android:exported="true" />
 
         <meta-data
