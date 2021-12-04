@@ -134,7 +134,7 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
                                 startActivity(intent);
                                 return true;
                             case id.registration:
-                                intent = new Intent(getApplicationContext(),RegistrationActivity.class);
+                                intent = new Intent(getApplicationContext(), RegistrationActivity.class);
                                 startActivity(intent);
                                 return true;
                         }
