@@ -30,9 +30,15 @@ public class CultureActivity extends AppCompatActivity {
         list_excel = (ListView)findViewById(R.id.list_excel);
 
         culture_list();
+
+        SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
+                new String[]{"name", "location"},
+                new int[]{android.R.id.text1, android.R.id.text2});
+
+        list_excel.setAdapter(adapter);
     }
 
-        public void culture_list() {
+    public void culture_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -52,7 +58,7 @@ public class CultureActivity extends AppCompatActivity {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "문화/취미" :
+                            case "문화" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();
