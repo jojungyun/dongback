@@ -182,14 +182,6 @@
             android:text="가맹점 폐업, 업종 변경 등 가맹점 정보가 변경되거나 소지하고 있는카드 종류에 따라 현재 정보와 상이할 수 있습니다."
             tools:ignore="HardcodedText" />
 
-        <ImageButton
-            android:id="@+id/back"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_gravity="right"
-            android:backgroundTint="#79D1CECE"
-            android:src="@drawable/ic_back"
-            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
 </RelativeLayout>
