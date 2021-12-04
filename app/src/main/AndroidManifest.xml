@@ -13,13 +13,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifePlus">
+
+        <activity
+            android:name=".BeautyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CafeActivity"
+            android:exported="true" />
         <activity
             android:name=".CategoryActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".CirculationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CultureActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CvsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EducationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EtcActvity"
+            android:exported="true" />
+        <activity
+            android:name=".MedicineActivity"
+            android:exported="true" />
         <activity
             android:name=".RegistrationActivity"
             android:exported="true" />
+        <activity
+            android:name=".RestaruntActivity"
+            android:exported="true" />
+
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
