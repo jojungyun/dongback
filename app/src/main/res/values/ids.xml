@@ -3,4 +3,5 @@
     <item name="editText" type="id" />
     <item name="button" type="id" />
     <item name="my_toolbar" type="id" />
+    <item name="spinner" type="id" />
 </resources>
