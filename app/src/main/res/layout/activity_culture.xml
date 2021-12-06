@@ -6,12 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_excel"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#E1E1E1"
+            android:gravity="center_vertical"
+            android:text="문화/취미 가맹점 리스트"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/list_excel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"/>
+    </LinearLayout>
 
 </RelativeLayout>

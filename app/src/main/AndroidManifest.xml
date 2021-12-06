@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifePlus">
         <activity
-            android:name=".RegistratioinActivity"
+            android:name=".RegistrationActivity"
             android:exported="true" />
         <activity
             android:name=".BeautyActivity"
