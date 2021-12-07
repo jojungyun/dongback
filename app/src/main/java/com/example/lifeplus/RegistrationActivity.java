@@ -25,10 +25,12 @@ public class RegistrationActivity extends AppCompatActivity {
     private Spinner spinner;//spinner사용하기 위한 선언
 
     //데베에 저장하기 위한 선언
-    DatabaseReference mDatabase;
-    EditText et_storename, et_storeaddress;
+
+    EditText et_store_name, et_store_address;
     //spin으로 한 카테고리 부분
     Button save_bt;
+
+    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,21 +47,24 @@ public class RegistrationActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         //edittext
-        et_storename = findViewById(R.id.et_storename);
-        et_storeaddress = findViewById(R.id.et_storeaddress);
+        et_store_name = findViewById(R.id.et_store_name);
+        et_store_address = findViewById(R.id.et_store_address);
         save_bt = findViewById(R.id.save_bt);
+
+        //firebase 데이터베이스 정의
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         save_bt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                String store_name = et_storename.getText().toString();
-                String store_address = et_storeaddress.getText().toString();
+                String store_name = et_store_name.getText().toString();
+                String store_address = et_store_address.getText().toString();
                 //spinner로 한 카테고리 부분 선언
 
                 HashMap result = new HashMap();
-                result.put("업체명", store_name);
-                result.put("주소", store_address);
+                result.put("store_name", store_name);
+                result.put("store_address", store_address);
+
                 //spinner로 한 카테고리 부분
 
                 //데이터 베이스 쓰기 하는 함수개설
@@ -72,12 +77,12 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
     }
-    void writeUser(String _userId, String _storename, String _storeaddress /*String _category*/){
-        User user = new User(_storename,_storeaddress);
+    void writeUser(String _userId, String _store_name, String _store_address /*String _category*/){
+        User user = new User(_store_name,_store_address);
 
         mDatabase.child("users").child(_userId).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-            public void onSuccess(Void unused) {
+            public void onSuccess(Void aVoid) {
                 //성공하면 실행
                 Toast.makeText(getApplicationContext(),"저장 완료",Toast.LENGTH_SHORT).show();
             }

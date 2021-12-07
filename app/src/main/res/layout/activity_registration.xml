@@ -47,7 +47,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/et_storename"
+                android:id="@+id/et_store_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  업체명을 입력하세요." />
@@ -86,7 +86,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/et_storeaddress"
+                android:id="@+id/et_store_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  주소를 입력하세요."

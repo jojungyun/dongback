@@ -2,41 +2,41 @@ package com.example.lifeplus;
 
 public class User {
     public String store_name;
-    public String category;
+    //public String category;
     public String store_address;
 
     public User(){
 
     }
 
-    public User(String _storename, String _storeaddress/*, String _category*/){
-        store_name = _storename;
-        store_address = _storeaddress;
+    public User(String _store_name, String _store_address/*, String _category*/){
+        store_name = _store_name;
+        store_address = _store_address;
         //category = _category;
     }
 
-    public String getStorename(){
+    public String getStore_name(){
         return store_name;
     }
-    public void setStorename(String _storename){
-        store_name = _storename;
+    public void setStore_name(String _store_name){
+        store_name = _store_name;
     }
 
-    public String getAddress(){
+    public String getStore_address(){
         return store_address;
     }
-    public void setAddress(String _storeaddress){
-        store_address = _storeaddress;
+    public void setStore_address(String _store_address){
+        store_address = _store_address;
     }
 
-    public String getCategory(){
+    /*public String getCategory(){
         return category;
     }
     public void setCategory(String _category){
         category = _category;
-    }
-   /* @Override
-    public String toString(){
-        return "가맹점 : "+store_name+", "+"주소 : " + store_address; //+", "+"카테고리 : "+category
     }*/
+    @Override
+    public String toString(){
+        return "User{" + "store_name = " +store_name+", "+"store_address = " + store_address+"}"; //+", "+"카테고리 : "+category
+    }
 }
