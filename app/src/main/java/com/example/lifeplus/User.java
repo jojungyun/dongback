@@ -35,9 +35,8 @@ public class User {
     public void setCategory(String _category){
         category = _category;
     }
-
-    @Override
+   /* @Override
     public String toString(){
         return "가맹점 : "+store_name+", "+"주소 : " + store_address; //+", "+"카테고리 : "+category
-    }
+    }*/
 }
