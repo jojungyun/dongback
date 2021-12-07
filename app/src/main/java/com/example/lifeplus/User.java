@@ -26,14 +26,14 @@ public class User {
         return store_address;
     }
     public void setAddress(String _storeaddress){
-        store_name = _storeaddress;
+        store_address = _storeaddress;
     }
 
     public String getCategory(){
         return category;
     }
     public void setCategory(String _category){
-        store_name = _category;
+        category = _category;
     }
 
     @Override
