@@ -47,7 +47,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/store_name"
+                android:id="@+id/et_storename"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  업체명을 입력하세요." />
@@ -86,7 +86,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/store_address"
+                android:id="@+id/et_storeaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  주소를 입력하세요."
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onListAdd"
+                android:onClick="onExcelSave"
                 android:text="저장하기" />
         </LinearLayout>
     </LinearLayout>

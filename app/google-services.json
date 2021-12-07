@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "891247487402",
+    "project_id": "nara-d231b",
+    "storage_bucket": "nara-d231b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891247487402:android:b633029d39b54dace363d3",
+        "android_client_info": {
+          "package_name": "com.example.lifeplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891247487402-7vipmn75dcsma8tqgaddrfqqoneaod9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEWqDguKZ10nX3-Rmd26-Kl4UyGVw_2W8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891247487402-7vipmn75dcsma8tqgaddrfqqoneaod9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
