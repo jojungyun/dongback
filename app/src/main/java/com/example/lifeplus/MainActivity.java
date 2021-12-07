@@ -51,7 +51,7 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
         imageButton = findViewById(id.search);
         registerForContextMenu(imageButton);
 
-            //지도 사용권한을 받아옴
+        //지도 사용권한을 받아옴
         locationSource = new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -153,11 +153,10 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
                 String str = editText.getText().toString();
                 if (str.length() > 1) {
                     List<Address> addressList = null;
-                    try {
-                        // editText에 입력한 텍스트(주소, 지역, 장소 등)을 지오 코딩을 이용해 변환
+                    try {// editText에 입력한 텍스트(주소, 지역, 장소 등)을 지오 코딩을 이용해 변환
                         addressList = geocoder.getFromLocationName(
                                 str, // 주소
-                                10); // 최대 검색 결과 개수
+                                10);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -175,11 +174,10 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
 
                     // 좌표(위도, 경도) 생성
                     LatLng point = new LatLng(Double.parseDouble(latitude), Double.parseDouble(longitude));
-                    marker.setMap(null);
+
                     marker.setPosition(point);
                     // 마커 추가
                     marker.setMap(naverMap);
-
 
                     CameraUpdate cameraUpdate = CameraUpdate.scrollTo(point);
                     naverMap.moveCamera(cameraUpdate);
@@ -203,8 +201,6 @@ public class MainActivity<imageButton> extends AppCompatActivity implements OnMa
     }
 
     // 선택한 마커의 위치가 가시거리(카메라가 보고있는 위치 반경 3km 내)에 있는지 확인
-    //public final static double REFERANCE_LAT = 1 / 109.958489129649955;
-    //public final static double REFERANCE_LNG = 1 / 88.74;
     public final static double REFERANCE_LAT_X3 = 3 / 109.958489129649955;
     public final static double REFERANCE_LNG_X3 = 3 / 88.74;
 
