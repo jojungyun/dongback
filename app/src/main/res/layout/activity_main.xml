@@ -15,7 +15,7 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#90818181"
+            android:backgroundTint="#C8C7C7"
             android:src="@drawable/ic_menu"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -35,7 +35,7 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#90818181"
+            android:backgroundTint="#C8C7C7"
             android:src="@drawable/ic_search"
             tools:ignore="SpeakableTextPresentCheck" />
 
