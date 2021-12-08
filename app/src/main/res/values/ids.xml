@@ -4,4 +4,5 @@
     <item name="button" type="id" />
     <item name="my_toolbar" type="id" />
     <item name="spinner" type="id" />
+    <item name="save_bt" type="id" />
 </resources>

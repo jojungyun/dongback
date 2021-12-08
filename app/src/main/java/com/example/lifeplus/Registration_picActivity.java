@@ -1,19 +1,15 @@
 package com.example.lifeplus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
@@ -32,7 +28,7 @@ public class Registration_picActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(intent, REQUEST_CODE, null);
+                startActivityForResult(intent,REQUEST_CODE, null);
             }
         });
         Button button = (Button) findViewById(R.id.button);
@@ -43,6 +39,7 @@ public class Registration_picActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
