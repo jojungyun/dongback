@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -23,24 +22,21 @@
             android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="400dp"
-        android:layout_height="610dp"
-        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="#FAF1F1F1"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
             <TextView
@@ -51,7 +47,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/store_name"
+                android:id="@+id/et_store_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  업체명을 입력하세요." />
@@ -60,7 +56,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -70,41 +66,16 @@
                 android:text="카테고리 : "
                 android:textSize="20sp" />
 
-
             <Spinner
-                android:id="@+id/spinner1"
+                android:id="@+id/spin1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tel_num"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="전화번호 : "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/store_num"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="  매장 전화번호를 입력하세요."
-                tools:ignore="TouchTargetSizeCheck" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -115,7 +86,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/store_address"
+                android:id="@+id/et_store_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="  주소를 입력하세요."
@@ -125,7 +96,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -142,23 +113,20 @@
                 android:hint="  사업자 번호를 입력하세요." />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/upload"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#C8C7C7"
-            android:text="등록" />
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
-
+            <Button
+                android:id="@+id/save_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onExcelSave"
+                android:text="저장하기" />
+        </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>
