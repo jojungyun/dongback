@@ -25,9 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private Spinner spinner;//spinner사용하기 위한 선언
 
     //데베에 저장하기 위한 선언
-
     EditText et_store_name, et_store_address;
-    //spin으로 한 카테고리 부분
     Button save_bt;
 
     DatabaseReference mDatabase;
@@ -59,13 +57,10 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View view){
                 String store_name = et_store_name.getText().toString();
                 String store_address = et_store_address.getText().toString();
-                //spinner로 한 카테고리 부분 선언
 
                 HashMap result = new HashMap();
                 result.put("store_name", store_name);
                 result.put("store_address", store_address);
-
-                //spinner로 한 카테고리 부분
 
                 //데이터 베이스 쓰기 하는 함수개설
                 writeUser("응디",store_name,store_address);
@@ -77,7 +72,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
     }
-    void writeUser(String _userId, String _store_name, String _store_address /*String _category*/){
+    void writeUser(String _userId, String _store_name, String _store_address){
         User user = new User(_store_name,_store_address);
 
         mDatabase.child("users").child(_userId).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
