@@ -1,4 +1,4 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
 public class User {
     public String store_name;

@@ -1,6 +1,6 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
-import static com.example.lifeplus.R.*;
+import static com.example.dongback.R.*;
 
 import android.content.Intent;
 import android.location.Address;

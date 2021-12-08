@@ -1,10 +1,10 @@
-package com.example.lifeplus;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.dongback;
 
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +15,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class EducationActivity extends AppCompatActivity {
+public class MedicineActivity extends AppCompatActivity {
 
     ListView list_excel;
 
@@ -25,11 +25,11 @@ public class EducationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_education);
+        setContentView(R.layout.activity_medicine);
 
         list_excel = (ListView)findViewById(R.id.list_excel);
 
-        education_list();
+        medicine_list();
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
                 new String[]{"name", "location"},
@@ -38,7 +38,7 @@ public class EducationActivity extends AppCompatActivity {
         list_excel.setAdapter(adapter);
     }
 
-        public void education_list() {
+    public void medicine_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -58,7 +58,7 @@ public class EducationActivity extends AppCompatActivity {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "교육" :
+                            case "의료" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();

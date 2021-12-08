@@ -1,5 +1,5 @@
 
-package com.example.lifeplus;
+package com.example.dongback;
 
     import androidx.appcompat.app.AppCompatActivity;
 
@@ -101,7 +101,7 @@ public class CategoryActivity extends AppCompatActivity {
         etc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EtcActvity.class);
+                Intent intent=new Intent(getApplicationContext(), EtcActivity.class);
                 startActivity(intent);//액티비티 이동
             }
         });

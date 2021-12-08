@@ -1,4 +1,4 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +15,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class CafeActivity extends AppCompatActivity {
+public class CultureActivity extends AppCompatActivity {
 
     ListView list_excel;
 
@@ -25,11 +25,11 @@ public class CafeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cafe);
+        setContentView(R.layout.activity_culture);
 
         list_excel = (ListView)findViewById(R.id.list_excel);
 
-        cafe_list();
+        culture_list();
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
                 new String[]{"name", "location"},
@@ -38,7 +38,7 @@ public class CafeActivity extends AppCompatActivity {
         list_excel.setAdapter(adapter);
     }
 
-        public void cafe_list() {
+    public void culture_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -58,7 +58,7 @@ public class CafeActivity extends AppCompatActivity {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "카페" :
+                            case "문화" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();

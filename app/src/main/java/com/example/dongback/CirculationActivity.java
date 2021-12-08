@@ -1,4 +1,4 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +15,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class EtcActvity extends AppCompatActivity {
+public class CirculationActivity extends AppCompatActivity {
 
     ListView list_excel;
 
@@ -25,11 +25,11 @@ public class EtcActvity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_etc);
+        setContentView(R.layout.activity_circulation);
 
         list_excel = (ListView)findViewById(R.id.list_excel);
 
-        etc_list();
+        circulation_list();
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
                 new String[]{"name", "location"},
@@ -37,8 +37,7 @@ public class EtcActvity extends AppCompatActivity {
 
         list_excel.setAdapter(adapter);
     }
-
-        public void etc_list() {
+        public void circulation_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -58,7 +57,7 @@ public class EtcActvity extends AppCompatActivity {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "기타" :
+                            case "유통" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();

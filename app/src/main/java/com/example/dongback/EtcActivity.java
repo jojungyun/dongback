@@ -1,8 +1,7 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -16,7 +15,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class BeautyActivity extends AppCompatActivity {
+public class EtcActivity extends AppCompatActivity {
 
     ListView list_excel;
 
@@ -26,11 +25,11 @@ public class BeautyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beauty);
+        setContentView(R.layout.activity_etc);
 
         list_excel = (ListView)findViewById(R.id.list_excel);
 
-        beauty_list();
+        etc_list();
 
         SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
                 new String[]{"name", "location"},
@@ -39,7 +38,7 @@ public class BeautyActivity extends AppCompatActivity {
         list_excel.setAdapter(adapter);
     }
 
-        public void beauty_list() {
+        public void etc_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -59,7 +58,7 @@ public class BeautyActivity extends AppCompatActivity {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "미용" :
+                            case "기타" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();

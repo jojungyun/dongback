@@ -1,4 +1,4 @@
-package com.example.lifeplus;
+package com.example.dongback;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

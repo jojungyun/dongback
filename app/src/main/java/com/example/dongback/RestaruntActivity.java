@@ -1,10 +1,10 @@
-package com.example.lifeplus;
+package com.example.dongback;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +15,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
-public class MedicineActivity extends AppCompatActivity {
+public class RestaruntActivity extends AppCompatActivity {
 
     ListView list_excel;
 
@@ -25,20 +25,21 @@ public class MedicineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medicine);
+        setContentView(R.layout.activity_restarunt);
 
         list_excel = (ListView)findViewById(R.id.list_excel);
 
-        medicine_list();
+        restaurant_list();
 
-        SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2,
+        SimpleAdapter adapter = new SimpleAdapter(this, list,
+                android.R.layout.simple_list_item_2,
                 new String[]{"name", "location"},
                 new int[]{android.R.id.text1, android.R.id.text2});
 
         list_excel.setAdapter(adapter);
     }
 
-    public void medicine_list() {
+    public void restaurant_list() {
         try {
             // File read
             InputStream is = getBaseContext().getResources().getAssets().open("Gaya_Test.xls");
@@ -52,13 +53,13 @@ public class MedicineActivity extends AppCompatActivity {
                 if (sheet != null) {
                     int colTotal = sheet.getColumns();
                     int rowIndexStart = 0;
-                    int rowTotal = sheet.getColumn(colTotal - 1).length;
+                       int rowTotal = sheet.getColumn(colTotal - 1).length;
 
                     for (int row = rowIndexStart; row < rowTotal; row++) {
                         String category = sheet.getCell(2, row).getContents();
 
                         switch (category) {
-                            case "의료" :
+                            case "음식점" :
                                 String name = sheet.getCell(0, row).getContents();
                                 item.put("name", name);
                                 String location = sheet.getCell(1, row).getContents();
