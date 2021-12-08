@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lifeplus">
+    package="com.example.dongback">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,45 +14,42 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LifePlus">
+        android:theme="@style/Theme.dongback">
         <activity
-            android:name=".Registration_picActivity"
+            android:name="com.example.dongback.Registration_picActivity"
             android:exported="true" />
         <activity
-            android:name=".RegistrationActivity"
+            android:name="com.example.dongback.RegistrationActivity"
             android:exported="true" />
         <activity
-            android:name=".BeautyActivity"
+            android:name="com.example.dongback.BeautyActivity"
             android:exported="true" />
         <activity
-            android:name=".CafeActivity"
+            android:name="com.example.dongback.CafeActivity"
             android:exported="true" />
         <activity
-            android:name=".CategoryActivity"
+            android:name="com.example.dongback.CategoryActivity"
             android:exported="true" />
         <activity
-            android:name=".CirculationActivity"
+            android:name="com.example.dongback.CirculationActivity"
             android:exported="true" />
         <activity
-            android:name=".CultureActivity"
+            android:name="com.example.dongback.CultureActivity"
             android:exported="true" />
         <activity
-            android:name=".CvsActivity"
+            android:name="com.example.dongback.CvsActivity"
             android:exported="true" />
         <activity
-            android:name=".EducationActivity"
+            android:name="com.example.dongback.EducationActivity"
             android:exported="true" />
         <activity
-            android:name=".EtcActvity"
+            android:name="com.example.dongback.EtcActivity"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.dongback.MedicineActivity"
             android:exported="true" />
         <activity
-            android:name=".MedicineActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RegistrationActivity"
-            android:exported="true" />
-        <activity
-            android:name=".RestaruntActivity"
+            android:name="com.example.dongback.RestaruntActivity"
             android:exported="true" />
 
         <meta-data
@@ -60,7 +57,7 @@
             android:value="8qfcud19on" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.dongback.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

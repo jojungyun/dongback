@@ -8,6 +8,6 @@ dependencyResolutionManagement {
             url 'https://naver.jfrog.io/artifactory/maven/'
         }
     }
-    rootProject.name = "LifePlus"
+    rootProject.name = "dongback"
     include ':app'
 }
